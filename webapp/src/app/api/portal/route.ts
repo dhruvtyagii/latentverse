@@ -7,7 +7,7 @@ export async function POST(request: Request) {
         console.log(body);
         const { prompt } = body;
 
-        const resp = await fetch(process.env.BASETEN_ENDPOINT, {
+        const resp = await fetch("https://model-4q95x9jw.api.baseten.co/production/predict", {
             method: "POST",
             headers: {
                 "Authorization": "Api-Key " + process.env.BASETEN_API_KEY,
